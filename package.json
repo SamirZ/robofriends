@@ -2,7 +2,7 @@
   "name": "robofriends",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://samirz.github.io/https://github.com/samirz/robofriends",
+  "homepage": "https://samirz.github.io/robofriends",
   "dependencies": {
     "gh-pages": "^2.0.1",
     "react": "^16.8.6",
