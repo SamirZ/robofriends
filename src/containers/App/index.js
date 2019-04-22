@@ -22,8 +22,8 @@ class App extends Component {
   }
 
   searchChange = e => {
-    const { setSearchField } = this.props;
-    setSearchField(e.target.value);
+    const { dispatch, setSearchField } = this.props;
+    setSearchField(dispatch, e.target.value);
   };
 
   filerRobots = (robots, searchField) =>

@@ -5,10 +5,12 @@ import {
   GET_ROBOTS_FAILURE
 } from '../types';
 
-export const setSearchField = text => ({
-  type: CHANGE_SEARCH_FIELD,
-  payload: text
-});
+export const setSearchField = (dispatch, text) => {
+  dispatch({
+    type: CHANGE_SEARCH_FIELD,
+    payload: text
+  });
+};
 
 export const getRobots = dispatch => {
   dispatch({ type: GET_ROBOTS });
