@@ -5,8 +5,12 @@ jobs:
       - image: circleci/node:10.15
     steps:
       - checkout
-      - run: npm install
-      - run: CI=true npm run build
+      - add_ssh_keys:
+          fingerprints:
+            - "f3:3f:7e:c7:33:c9:71:c2:7e:c0:ab:1c:2b:94:a8:e0"
+      - run: npm instal
+      - run: npm run predeploy
+      - run: npm run deploy
   test:
     docker:
       - image: circleci/node:10.15
@@ -25,5 +29,7 @@ workflows:
   version: 2
   build_test_and_lint:
     jobs:
-      - build
       - test
+      - build:
+        requires:
+          - test
