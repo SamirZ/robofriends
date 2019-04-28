@@ -5,16 +5,22 @@ jobs:
       - image: circleci/node:10.15
     steps:
       - checkout
-      - run: echo "npm installing"
       - run: npm install
       - run: CI=true npm run build
   test:
     docker:
       - image: circleci/node:10.15
     steps:
-      - run: echo "npm installing pre test"
+      - checkout
       - run: npm install
       - run: npm test
+  deploy:
+    docker:
+      - image: circleci/node:10.15
+    steps:
+      - checkout
+      - run: npm install
+      - run: npm deploy
 workflows:
   version: 2
   build_test_and_lint:
