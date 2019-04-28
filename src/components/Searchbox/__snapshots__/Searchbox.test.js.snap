@@ -1,0 +1,151 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`expect to render Searchbox component 1`] = `
+ShallowWrapper {
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <Searchbox />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "checkPropTypes": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateError": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <label
+          className="pa2 b lightest-blue"
+          htmlFor="search"
+        >
+          Search robots
+        </label>,
+        <input
+          className="pa3 ba b--green bg-lightest-blue mw5"
+          id="search"
+          placeholder="Search robots"
+          type="search"
+        />,
+      ],
+      "className": "pa2 flex flex-column justify-center items-center",
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "Search robots",
+          "className": "pa2 b lightest-blue",
+          "htmlFor": "search",
+        },
+        "ref": null,
+        "rendered": "Search robots",
+        "type": "label",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "className": "pa3 ba b--green bg-lightest-blue mw5",
+          "id": "search",
+          "onChange": undefined,
+          "placeholder": "Search robots",
+          "type": "search",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": "input",
+      },
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <label
+            className="pa2 b lightest-blue"
+            htmlFor="search"
+          >
+            Search robots
+          </label>,
+          <input
+            className="pa3 ba b--green bg-lightest-blue mw5"
+            id="search"
+            placeholder="Search robots"
+            type="search"
+          />,
+        ],
+        "className": "pa2 flex flex-column justify-center items-center",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "Search robots",
+            "className": "pa2 b lightest-blue",
+            "htmlFor": "search",
+          },
+          "ref": null,
+          "rendered": "Search robots",
+          "type": "label",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "className": "pa3 ba b--green bg-lightest-blue mw5",
+            "id": "search",
+            "onChange": undefined,
+            "placeholder": "Search robots",
+            "type": "search",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": "input",
+        },
+      ],
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "legacyContextMode": "parent",
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getChildContext": Object {
+            "calledByRenderer": false,
+          },
+          "getDerivedStateFromError": true,
+          "getDerivedStateFromProps": Object {
+            "hasShouldComponentUpdateBug": false,
+          },
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
+      },
+    },
+  },
+}
+`;

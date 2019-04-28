@@ -1,6 +1,6 @@
 import React from 'react';
 
-const SearchBox = ({ searchChange }) => (
+const Searchbox = ({ searchChange }) => (
   <div className='pa2 flex flex-column justify-center items-center'>
     <label htmlFor='search' className='pa2 b lightest-blue'>
       Search robots
@@ -15,4 +15,4 @@ const SearchBox = ({ searchChange }) => (
   </div>
 );
 
-export default SearchBox;
+export default Searchbox;

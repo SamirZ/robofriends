@@ -4,20 +4,26 @@ import {
   GET_ROBOTS_SUCCESS,
   GET_ROBOTS_FAILURE
 } from '../types';
+import apiCall from '../../utils/apiCall';
 
-export const setSearchField = (dispatch, text) => {
-  dispatch({
-    type: CHANGE_SEARCH_FIELD,
-    payload: text
-  });
-};
+export const setSearchField = text => ({
+  type: CHANGE_SEARCH_FIELD,
+  payload: text
+});
 
-export const getRobots = dispatch => {
+export const getRobots = () => dispatch => {
   dispatch({ type: GET_ROBOTS });
-  fetch('https://jsonplaceholder.typicode.com/users')
-    .then(res => res.json())
-    .then(robots => dispatch({ type: GET_ROBOTS_SUCCESS, payload: robots }))
-    .catch(error => {
-      dispatch({ type: GET_ROBOTS_FAILURE, payload: error });
-    });
+  return apiCall('https://jsonplaceholder.typicode.com/users')
+    .then(robots => dispatch(getRobotsSuccess(robots)))
+    .catch(error => dispatch(getRobotsFailure(error)));
 };
+
+export const getRobotsSuccess = robots => ({
+  type: GET_ROBOTS_SUCCESS,
+  payload: robots
+});
+
+export const getRobotsFailure = error => ({
+  type: GET_ROBOTS_FAILURE,
+  payload: error
+});
