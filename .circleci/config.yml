@@ -8,7 +8,7 @@ jobs:
       - add_ssh_keys:
           fingerprints:
             - "f3:3f:7e:c7:33:c9:71:c2:7e:c0:ab:1c:2b:94:a8:e0"
-      - run: npm instal
+      - run: npm install
       - run: npm run predeploy
       - run: npm run deploy
   test:
